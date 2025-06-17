@@ -236,6 +236,7 @@ export default function FlappyBirdPage() {
       <StartButton
         onClick={startGame}
         visible={!state.isStarted || state.isGameOver || gameOver}
+        style={{ marginTop: 40 }} // 向下移动按钮，避免被排行榜遮挡
       />
       {/* 分数板 */}
       {state.isStarted && (
