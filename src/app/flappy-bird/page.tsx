@@ -243,10 +243,12 @@ export default function FlappyBirdPage() {
           zIndex: 10000,
         }}
       >
-        <StartButton
-          onClick={startGame}
-          visible={!state.isStarted || state.isGameOver || gameOver}
-        />
+        {(!state.isGameOver && !gameOver) && (
+          <StartButton
+            onClick={startGame}
+            visible={!state.isStarted || state.isGameOver || gameOver}
+          />
+        )}
       </div>
       {/* 分数板 */}
       {state.isStarted && (
