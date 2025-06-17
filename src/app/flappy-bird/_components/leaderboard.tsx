@@ -16,23 +16,23 @@ export const Leaderboard: React.FC<LeaderboardProps> = ({ myScore }) => {
   return (
     <div
       style={{
-        width: 320,
+        width: 240,
         background: "rgba(250,251,252,0.7)",
         borderRadius: 12,
-        padding: 16,
+        padding: 12,
         zIndex: 9999,
         position: "relative",
         boxShadow: "0 2px 16px rgba(33,150,243,0.08)",
         backdropFilter: "blur(2px)",
         border: "none",
         fontFamily:
-          "Comic Sans MS, Comic Sans, Chalkboard, fantasy, sans-serif", // 卡通字体
+          "Comic Sans MS, Comic Sans, Chalkboard, fantasy, sans-serif",
       }}
     >
       <h3
         style={{
-          marginBottom: 16,
-          fontSize: 32,
+          marginBottom: 12,
+          fontSize: 22,
           fontWeight: 900,
           color: "#1976d2",
           letterSpacing: 2,
@@ -47,15 +47,15 @@ export const Leaderboard: React.FC<LeaderboardProps> = ({ myScore }) => {
           <li
             key={score.name + idx}
             style={{
-              height: 48,
-              lineHeight: "48px",
+              height: 36,
+              lineHeight: "36px",
               fontWeight: score.value === myScore ? "bold" : 700,
-              fontSize: 24,
+              fontSize: 16,
               fontFamily: "inherit",
               background: score.value === myScore ? "#e3f2fd" : "transparent",
               borderRadius: 4,
-              marginBottom: 4,
-              padding: "0 12px",
+              marginBottom: 2,
+              padding: "0 8px",
               display: "flex",
               justifyContent: "space-between",
               color: score.value === myScore ? "#1976d2" : "#333",
