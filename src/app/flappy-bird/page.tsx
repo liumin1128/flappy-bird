@@ -226,14 +226,15 @@ export default function FlappyBirdPage() {
               justifyContent: "center",
               margin: "32px 0 0 0",
               position: "relative",
-              zIndex: 11,
+              zIndex: 9,
+              pointerEvents: "none", // 禁止排行榜拦截点击
             }}
           >
             <Leaderboard myScore={score} />
           </div>
         </>
       )}
-      <div style={{ display: "flex", justifyContent: "center", marginTop: 40 }}>
+      <div style={{ display: "flex", justifyContent: "center", marginTop: 40, position: "relative", zIndex: 10000 }}>
         <StartButton
           onClick={startGame}
           visible={!state.isStarted || state.isGameOver || gameOver}
