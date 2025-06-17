@@ -234,7 +234,15 @@ export default function FlappyBirdPage() {
           </div>
         </>
       )}
-      <div style={{ display: "flex", justifyContent: "center", marginTop: 40, position: "relative", zIndex: 10000 }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          marginTop: 40,
+          position: "relative",
+          zIndex: 10000,
+        }}
+      >
         <StartButton
           onClick={startGame}
           visible={!state.isStarted || state.isGameOver || gameOver}
